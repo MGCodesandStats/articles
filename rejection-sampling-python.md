@@ -16,6 +16,8 @@ There is a reason I provided an image of a darts board at the beginning of this 
 
 A Cartesian graph consists of x and y-axes across a defined space.
 
+![image-1](image-1.png)
+
 Source: Image Created by Author
 
 Across the area of the graph, a given distribution (such as a normal distribution) can only cover a given section of the graph. In this regard, if one were to randomly throw darts at the board, then the darts that fell within the area of the normal distribution would be accepted, while those outside of that area would be rejected.
