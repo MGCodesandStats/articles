@@ -1,3 +1,9 @@
+[Home](https://mgcodesandstats.github.io/) |
+[GitHub](https://github.com/mgcodesandstats) |
+[LinkedIn](https://www.linkedin.com/in/michaeljgrogan/) |
+[Terms](https://mgcodesandstats.github.io/terms/) |
+[E-mail](mailto:contact@michael-grogan.com)
+
 # Rejection Sampling in Python
 
 Rejection sampling is a means of generating random numbers that belong to a particular distribution.
