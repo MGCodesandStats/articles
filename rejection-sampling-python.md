@@ -16,9 +16,7 @@ np.random.randn(1000)
 
 How exactly does this process work? Upon generating random numbers in Python, how can an algorithm know whether a random number belongs to a particular distribution or not? This is where rejection sampling comes in.
 
-## Rejection Sampling
-
-There is a reason I provided an image of a darts board at the beginning of this article — as it is the most intuitive way to think about how rejection sampling works.
+## Uniform Random Numbers
 
 A Cartesian graph consists of x and y-axes across a defined space.
 
@@ -64,9 +62,11 @@ array([0.00879322, 0.19344109, 0.53193192, ..., 0.45176108, 0.78405714, 0.856801
 ```
 ![rejection-2](rejection-2.png)
 
-Source: Jupyter Notebook Output
+*Source: Jupyter Notebook Output*
 
 Here, we can see that the samples that follow the normal distribution are highlighted in orange.
+
+## Efficiency Ratio
 
 One thing we would like to know is the **efficiency ratio** — i.e. what proportion of the random numbers generated actually belong to the defined distribution?
 
@@ -112,7 +112,7 @@ A scale of 0.1 is set for M once again.
 
 ![rejection-4](rejection-4.png)
 
-Source: Jupyter Notebook Output
+*Source: Jupyter Notebook Output*
 
 ```
 >>> u1_size=u1.size
