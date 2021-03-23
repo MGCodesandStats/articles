@@ -78,7 +78,7 @@ One thing we would like to know is the **efficiency ratio** — i.e. what propor
 0.4931
 ```
 
-Based on the above, 49.31% of the generated samples fall under the area of the normal distribution. This means that half of the samples generated are being discarded.
+Based on the above, **49.31%** of the generated samples fall under the area of the normal distribution. This means that half of the samples generated are being discarded.
 
 What if the scale is decreased to 0.1?
 
@@ -88,7 +88,7 @@ What if the scale is decreased to 0.1?
 
 In this case, the normal distribution covers more of the overall area and less samples are being discarded.
 
-The efficiency also increases to 71.24%.
+The efficiency also increases to **71.24%**.
 
 ## Defining different probability densities
 
