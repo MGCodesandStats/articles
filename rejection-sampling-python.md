@@ -56,6 +56,7 @@ v samples are generated based on the rejection criterion:
 
 array([0.00879322, 0.19344109, 0.53193192, ..., 0.45176108, 0.78405714, 0.85680125])
 ```
+![rejection-2](rejection-2.png)
 
 Source: Jupyter Notebook Output
 
