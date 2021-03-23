@@ -52,8 +52,9 @@ v samples are generated based on the rejection criterion:
 
 ```
 >>> v=u1[idx]
->>> varray([0.00879322, 0.19344109, 0.53193192, ..., 0.45176108, 0.78405714, 0.85680125])
->>> 
+>>> v
+
+array([0.00879322, 0.19344109, 0.53193192, ..., 0.45176108, 0.78405714, 0.85680125])
 ```
 
 Source: Jupyter Notebook Output
