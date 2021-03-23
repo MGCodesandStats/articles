@@ -4,7 +4,9 @@ Rejection sampling is a means of generating random numbers that belong to a part
 
 For instance, let’s say that one wishes to generate 1,000 random numbers that follow a normal distribution. If one wishes to do this in Python using numpy, it is quite a simple execution:
 
-```np.random.randn(1000)```
+```
+np.random.randn(1000)
+```
 
 However, how exactly does this process work? Upon generating random numbers in Python, how can an algorithm know whether a random number belongs to a particular distribution or not? This is where rejection sampling comes in.
 
