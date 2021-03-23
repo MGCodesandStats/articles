@@ -62,7 +62,7 @@ Source: Jupyter Notebook Output
 
 Here, we can see that the samples that follow the normal distribution are highlighted in orange.
 
-One thing we would like to know is the efficiency ratio — i.e. what proportion of the random numbers generated actually belong to the defined distribution?
+One thing we would like to know is the **efficiency ratio** — i.e. what proportion of the random numbers generated actually belong to the defined distribution?
 
 ```
 >>> u1_size=u1.size
