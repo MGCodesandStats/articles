@@ -82,6 +82,8 @@ Based on the above, 49.31% of the generated samples fall under the area of the n
 
 What if the scale is decreased to 0.1?
 
+![rejection-3](rejection-3.png)
+
 *Source: Jupyter Notebook Output*
 
 In this case, the normal distribution covers more of the overall area and less samples are being discarded.
@@ -101,6 +103,8 @@ f=lambda x: 1/(3.14*(1+x**2))
 ```
 
 A scale of 0.1 is set for M once again.
+
+![rejection-4](rejection-4.png)
 
 Source: Jupyter Notebook Output
 
