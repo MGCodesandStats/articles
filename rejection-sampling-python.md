@@ -16,7 +16,7 @@ There is a reason I provided an image of a darts board at the beginning of this 
 
 A Cartesian graph consists of x and y-axes across a defined space.
 
-![image-1](image-1.png)
+![rejection-1](rejection-1.png)
 
 *Source: Image Created by Author*
 
