@@ -10,7 +10,9 @@ When generating random numbers from a particular distribution, this process can 
 
 For instance, if one wants to generate 100 random numbers that belong to a normal distribution in R, it is as simple as executing:
 
-```rnorm(100)```
+```
+rnorm(100)
+```
 
 However, how does this process actually work "under the hood"? How can an algorithm know whether a random number belongs to a particular distribution or not?
 
@@ -62,7 +64,7 @@ Here is the generated simulation:
 Optimal c = 1
 The numbers of Rejections = 0
 Ratio of Rejections = 0
-> data
+> simulation
   [1] 0.698931268 0.385566025 0.268550105 0.645668389
   [5] 0.074197359 0.106701437 0.413400215 0.852781124
 ...
@@ -83,14 +85,14 @@ However, when the random numbers are sampled from a different distribution, we c
 Let's specify *Y.dist* as a normal distribution.
 
 ```
-data = AR.Sim( n = 200,
+simulation = AR.Sim( n = 200,
                f_X = function(y){dunif(y, min = 0, max = 1, log = FALSE)},
                Y.dist = "norm", Y.dist.par = c(0,1),
                Rej.Num = TRUE,
                Rej.Rate = TRUE,
                Acc.Rate = FALSE
 )
-data
+simulation
 ```
 
 Here is the generated sample and rejection score.
@@ -99,7 +101,7 @@ Here is the generated sample and rejection score.
 Optimal c = 4.132
 The numbers of Rejections = 646
 Ratio of Rejections = 0.764
-> data
+> simulation
   [1] 0.928162718 0.263720941 0.791635163 0.787643782
   [5] 0.682266914 0.609826459 0.526126303 0.303784735
 ...
@@ -118,14 +120,14 @@ Here is a graphical representation:
 How about a Cauchy distribution?
 
 ```
-data = AR.Sim( n = 200,
+simulation = AR.Sim( n = 200,
                f_X = function(y){dunif(y, min = 0, max = 1, log = FALSE)},
                Y.dist = "cauchy", Y.dist.par = c(0,1),
                Rej.Num = TRUE,
                Rej.Rate = TRUE,
                Acc.Rate = FALSE
 )
-data
+simulation
 ```
 
 In this case, a significantly higher rejection rate of 83.9% is observed:
@@ -134,7 +136,7 @@ In this case, a significantly higher rejection rate of 83.9% is observed:
 Optimal c = 6.283
 The numbers of Rejections = 1042
 Ratio of Rejections = 0.839
-> data
+> simulation
   [1] 0.942316029 0.610005076 0.653872133 0.411678591
   [5] 0.350234804 0.511995680 0.962110053 0.224207609
 ...
@@ -157,14 +159,14 @@ When random numbers belonging to the normal distribution were sampled from a uni
 What if the y function was instead defined as a beta distribution? In attempting to identify normally distributed random numbers from this distribution, would a lower or higher rejection rate be observed?
 
 ```
-data = AR.Sim( n = 200,
+simulation = AR.Sim( n = 200,
                f_X = function(y){dbeta(y,2.7,6.3)},
                Y.dist = "norm", Y.dist.par = c(0,1),
                Rej.Num = TRUE,
                Rej.Rate = TRUE,
                Acc.Rate = FALSE
 )
-data
+simulation
 ```
 
 Here are the samples and rejection rate:
@@ -173,7 +175,7 @@ Here are the samples and rejection rate:
 Optimal c = 6.898
 The numbers of Rejections = 1231
 Ratio of Rejections = 0.86
-> data
+> simulation
   [1] 0.36115666 0.41559791 0.38940239 0.36566013 0.60793899
   [6] 0.25795174 0.10902713 0.27325963 0.64264824 0.18258016
 ...
@@ -181,9 +183,11 @@ Ratio of Rejections = 0.86
 [196] 0.22850070 0.41424580 0.34925813 0.13344548 0.57013744
 ```
 
-In this case, the rejection rate of **86%** is significantly higher when sampling from the beta distribution, implying that it is slightly more efficient to sample from the uniform distribution (at least when attempting to generate normally distributed random numbers from this distribution).
+In this case, the rejection rate of **86%** is significantly higher when sampling from the beta distribution, implying that it is more efficient to sample from the uniform distribution (at least when attempting to generate normally distributed random numbers from this distribution).
 
 ![ar-4](ar-4.png)
+
+While this does not make a difference in terms of the numbers generated, a lower rejection rate is more efficient - as sampling from a distribution that is closer to the target distribution invariably lessens the time needed for the simulation to generate the appropriate random numbers. This is known as the **efficiency ratio**.
 
 ## Conclusion
 
