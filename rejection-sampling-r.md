@@ -36,6 +36,8 @@ For reference, AR stands for **acceptance-rejection method**, which essentially 
 
 Let's take a look at some examples.
 
+### Defining y function as a uniform distribution
+
 Firstly, let's consider a uniform distribution with random numbers bounded between 0 and 1.
 
 ```
@@ -141,6 +143,8 @@ Once again, here is a graphical representation:
 ![ar-3](ar-3.png)
 
 In addition, it is also possible to change the distribution that the random numbers themselves are generated from.
+
+### Defining y function as a beta distribution
 
 While a uniform distribution has been selected here, the original author chose to define the y function as a beta distribution instead.
 
