@@ -78,6 +78,8 @@ Here is a graphical presentation, whereby we see that all random numbers are hig
 
 However, when the random numbers are sampled from a different distribution, we can expect that the rejection rate will be significant, as it is inevitable that the uniformly generated random numbers will fall outside the distribution.
 
+#### Y.dist = Normal Distribution
+
 Let's specify *Y.dist* as a normal distribution.
 
 ```
@@ -110,6 +112,8 @@ We see that a rejection rate of over **76%** is obtained in this case, meaning t
 Here is a graphical representation:
 
 ![ar-2](ar-2.png)
+
+#### Y.dist = Cauchy Distribution
 
 How about a Cauchy distribution?
 
