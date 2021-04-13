@@ -72,7 +72,7 @@ Ratio of Rejections = 0
 [197] 0.954960048 0.185282641 0.262304122 0.499565325
 ```
 
-Given that the generated random numbers are from the same distribution, then the rejection rate is 0, i.e. all generated random numbers fall within the specified distribution.
+Given that the generated random numbers are from the same distribution, the rejection ratio is **0**, i.e. all generated random numbers fall within the specified distribution.
 
 Here is a graphical presentation, whereby we see that all random numbers are highlighted in green - they all fall under the acceptance region:
 
@@ -80,7 +80,7 @@ Here is a graphical presentation, whereby we see that all random numbers are hig
 
 However, when the random numbers are sampled from a different distribution, we can expect that the rejection rate will be significant, as it is inevitable that the uniformly generated random numbers will fall outside the distribution.
 
-#### Y.dist = Normal Distribution
+### Y.dist = Normal Distribution
 
 Let's specify *Y.dist* as a normal distribution.
 
@@ -109,13 +109,13 @@ Ratio of Rejections = 0.764
 [197] 0.136600285 0.855113058 0.952162865 0.776729036
 ```
 
-We see that a rejection rate of over **76%** is obtained in this case, meaning that 76% of the generated samples are rejected.
+We see that a rejection ratio of **0.764** is obtained in this case.
 
 Here is a graphical representation:
 
 ![ar-2](ar-2.png)
 
-#### Y.dist = Cauchy Distribution
+### Y.dist = Cauchy Distribution
 
 How about a Cauchy distribution?
 
@@ -130,7 +130,7 @@ simulation = AR.Sim( n = 200,
 simulation
 ```
 
-In this case, a significantly higher rejection rate of 83.9% is observed:
+In this case, a significantly higher rejection ratio of **0.839** is observed:
 
 ```
 Optimal c = 6.283
@@ -154,9 +154,9 @@ In addition, it is also possible to change the distribution that the random numb
 
 While a uniform distribution has been selected here, the original author chose to define the y function as a beta distribution instead.
 
-When random numbers belonging to the normal distribution were sampled from a uniform distribution, the rejection rate was **76.4%**.
+When random numbers belonging to the normal distribution were sampled from a uniform distribution, the rejection rate was **0.764**.
 
-What if the y function was instead defined as a beta distribution? In attempting to identify normally distributed random numbers from this distribution, would a lower or higher rejection rate be observed?
+What if the y function was instead defined as a beta distribution? In attempting to identify normally distributed random numbers from this distribution, would a lower or higher rejection ratio be observed?
 
 ```
 simulation = AR.Sim( n = 200,
@@ -169,7 +169,7 @@ simulation = AR.Sim( n = 200,
 simulation
 ```
 
-Here are the samples and rejection rate:
+Here are the samples and the rejection ratio:
 
 ```
 Optimal c = 6.898
@@ -183,11 +183,11 @@ Ratio of Rejections = 0.86
 [196] 0.22850070 0.41424580 0.34925813 0.13344548 0.57013744
 ```
 
-In this case, the rejection rate of **86%** is significantly higher when sampling from the beta distribution, implying that it is more efficient to sample from the uniform distribution (at least when attempting to generate normally distributed random numbers from this distribution).
+In this case, the rejection ratio of **0.86** is significantly higher when sampling from the beta distribution, implying that it is more efficient to sample from the uniform distribution (at least when attempting to generate normally distributed random numbers from this distribution).
 
 ![ar-4](ar-4.png)
 
-While this does not make a difference in terms of the numbers generated, a lower rejection rate is more efficient - as sampling from a distribution that is closer to the target distribution invariably lessens the time needed for the simulation to generate the appropriate random numbers. This is known as the **efficiency ratio**.
+While this does not make a difference in terms of the numbers generated, a lower rejection ratio is more efficient - as sampling from a distribution that is closer to the target distribution invariably lessens the time needed for the simulation to generate the appropriate random numbers. This is known as the **efficiency ratio**.
 
 ## Conclusion
 
