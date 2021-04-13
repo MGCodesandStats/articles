@@ -152,7 +152,7 @@ In addition, it is also possible to change the distribution that the random numb
 
 While a uniform distribution has been selected here, the original author chose to define the y function as a beta distribution instead.
 
-When random numbers belonging to the normal distribution were sampled from a uniform distribution in this case, the rejection rate was **76.4%**.
+When random numbers belonging to the normal distribution were sampled from a uniform distribution, the rejection rate was **76.4%**.
 
 What if the y function was instead defined as a beta distribution? In attempting to identify normally distributed random numbers from this distribution, would a lower or higher rejection rate be observed?
 
